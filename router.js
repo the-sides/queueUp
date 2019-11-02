@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/test',function(req, res, next){
-  res.render('testEnv', { title: 'testing env' });
+  res.render('error', { title: 'testing env' });
 });
 
 
