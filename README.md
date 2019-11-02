@@ -1,2 +1,2 @@
-# web-template
-The template I'm always copying to develop node sites.
+Website for the discord bot: qUp
+github.com/ObsidianSkin/qUp
