@@ -4,6 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let {router} = require('./router') 
+let cors = require('cors')
 
 let indexRouter = router;
 
@@ -13,6 +14,7 @@ let app = express();
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'pug');
 
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

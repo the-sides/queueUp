@@ -1,6 +1,6 @@
-const response = await fetch('http://queueUp.tech/join', {
+let response = await fetch('http://www.queueUp.tech/join', {
     method: 'POST',
-    body: {'foo':'bar'}
+    body: 'asdf'
   });
   const result = await response.json();
   console.log('Success:', JSON.stringify(result));
