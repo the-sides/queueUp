@@ -71,6 +71,7 @@ main{
 
   }
   .leader{
+      display: none;
       position: absolute;
       right: 0;
       top: 0;
@@ -80,6 +81,11 @@ main{
       }
   }
 
+}
+.mainUser{
+  .leader{
+    display: block;
+  }
 }
 .center{
   line-height: 64px;
