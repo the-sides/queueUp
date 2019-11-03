@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-let setupDump, updateBlip, helloWorld
 
 // Create a new client
 
@@ -16,4 +15,4 @@ router.get('/test',function(req, res, next){
 
 
 
-module.exports = {router, setupDump};
+module.exports = {router};
