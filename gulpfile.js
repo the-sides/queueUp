@@ -59,8 +59,8 @@ function vendors(){
 }
 
 function images(){
-    return src(['./src/images/**/**'])
-            .pipe(dest('dist/images/'))
+    return src(['./src/svgs/**/**'])
+            .pipe(dest('dist/svgs/'))
 }
 
 const dev = series(
@@ -69,7 +69,7 @@ const dev = series(
     scripts, 
     parallel(
         styles, 
-    //    images
+       images
         )
     )
 
