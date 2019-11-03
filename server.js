@@ -5,8 +5,8 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let {router} = require('./router') 
 let cors = require('cors')
-const {Firestore} = require('@google-cloud/firestore');
-const admin = require('firebase-admin');
+// const {Firestore} = require('@google-cloud/firestore');
+// const admin = require('firebase-admin');
 const env = require('dotenv').config()
 
 //   Broken on production and wasn't working anyways
@@ -15,9 +15,9 @@ const env = require('dotenv').config()
 //   credential: admin.credential.cert(serviceAccount)
 // });
 
-let db = admin.firestore();
+// let db = admin.firestore();
 
-const usersRef = db.collection('users')
+// const usersRef = db.collection('users')
 function updateUser(){
   return true
 }
