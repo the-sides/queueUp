@@ -10,8 +10,9 @@ router.get('/test',function(req, res, next){
   res.render('error', { title: 'testing env' });
 });
 
-router.post('/user', function(req, res){
+router.post('/user', function(req, res, next){
   console.log(req.body)
+  res.send('good job')
 })
 
 
