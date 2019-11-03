@@ -7,7 +7,7 @@ const firestore = new Firestore();
 
 async function quickstart() {
   // Obtain a document reference.
-  const document = firestore.doc('posts/intro-to-firestore');
+  const document = firestore.doc('users');
 
   // Enter new data into the document.
   await document.set({
@@ -16,19 +16,21 @@ async function quickstart() {
   });
   console.log('Entered new data into the document');
 
-  // Update an existing document.
-  await document.update({
-    body: 'My first Firestore app',
-  });
-  console.log('Updated an existing document');
-
-  // Read the document.
-  let doc = await document.get();
-  console.log('Read the document');
-
-  // Delete the document.
-  await document.delete();
-  console.log('Deleted the document');
 }
+
+//   // Update an existing document.
+//   await document.update({
+//     body: 'My first Firestore app',
+//   });
+//   console.log('Updated an existing document');
+
+//   // Read the document.
+//   let doc = await document.get();
+//   console.log('Read the document');
+
+//   // Delete the document.
+//   await document.delete();
+//   console.log('Deleted the document');
+// }
 
 module.default = quickstart

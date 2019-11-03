@@ -28,7 +28,6 @@ async function dataRequest(q){
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 const db = firebase.firestore();
 
