@@ -58,9 +58,14 @@ function vendors(){
     .pipe(dest('dist/vendors/'))
 }
 
-function images(){
+function svgs(){
     return src(['./src/svgs/**/**'])
             .pipe(dest('dist/svgs/'))
+}
+
+function images(){
+    return src(['./src/images/**/**'])
+            .pipe(dest('dist/images/'))
 }
 
 const dev = series(
@@ -69,7 +74,8 @@ const dev = series(
     scripts, 
     parallel(
         styles, 
-       images
+        images,
+        svgs
         )
     )
 

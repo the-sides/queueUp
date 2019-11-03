@@ -16,17 +16,30 @@ header{
 }
 main{
   padding: 2em;
+  display: flex;
+  @include for-phone--only{
+    flex-direction: column;
+  }
 }
 
 .partyPanel{
   background-color: $dark;
   width: 40%;
+  // flex: 1;
   min-width: 300px;
   padding: 0.5em 1em;
   
   @include for-phone--only{
     width: 90%;
     margin: auto;
+  }
+}
+.potentials{
+  max-width: 50%;
+  margin-top: auto;
+  img{
+    width: 100%;
+    transform: scaleX(-1);
   }
 }
 
