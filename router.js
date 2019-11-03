@@ -5,8 +5,12 @@ var fs = require('fs');
 // Create a new client
 
 /* GET home page. */
-router.get('/*', function(req, res, next) {
-  res.render('home', { title: 'qUp', svg:{
+router.get('/', function(req, res, next) {
+  res.render('home', { title: 'qUp'});
+});
+
+router.get('/party?*', function(req, res, next) {
+  res.render('party', { title: 'qUp', svg:{
     crown: fs.readFileSync('dist/svgs/crown.svg', 'utf8')
   } });
 });

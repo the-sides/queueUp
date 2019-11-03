@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    main
+        .partyPanel
+            h1 Current Party:
+            .mainUser.card
+                .wrapper
+                    figure.avatar
+                        img
+                    .text
+                        p.name
+                        p.status
+                    figure.leader
+                        . 
+                            !{svg.crown}
+            .log
+        .potentials
+    footer
