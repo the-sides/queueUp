@@ -7,8 +7,8 @@ function run() {
     const usersQuery = db.collection('users')
 
     // Setup user info request
-    const userAutho = new URLSearchParams(document.location.search).get("user")
-    const mainUserQuery = usersQuery.where("authoToken","==",userAutho)
+    const uq = new URLSearchParams(document.location.search)
+    const mainUserQuery = usersQuery.where("discordName","==",uq.get('user'))
 
     // Request user info
     dataRequest(mainUserQuery).then(data=>introduceMainUser(data))
@@ -16,7 +16,8 @@ function run() {
     // Seak database update loop
     usersQuery.onSnapshot(function(querySnapshot) {
             querySnapshot.forEach(function(elm) {
-                updateUsers(elm.data());
+                if(elm.data()['discordName'] !== uq.get('user'))
+                    updateUsers(elm.data());
             });
         })
 }

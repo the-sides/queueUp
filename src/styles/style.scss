@@ -13,6 +13,12 @@ body {
 header{
   min-height: 64px;
   background-color: $red;
+  text-align: center;
+  color: $dark;
+  h1{
+    padding: 0;
+    margin: 0;
+  }
 }
 main{
   padding: 2em;
@@ -50,6 +56,7 @@ main{
   height: calc(64px + .8em);
   box-shadow: 0px 0px 4px black;
   padding: .4em;
+  margin: 0.8em;
   .wrapper{
     margin: auto 0;
     display: flex;
@@ -105,4 +112,10 @@ main{
 }
 .hide{
   display:none;
+}
+.looking{
+  box-shadow: 0px 0px 4px lime !important;
+}
+.busy{
+  box-shadow: 0px 0px 4px red !important;
 }
