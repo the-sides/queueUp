@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let setupDump, updateBlip, helloWorld
+let quickstart = require('./dbPoster')
 
 /* GET home page. */
 router.get('/*', function(req, res, next) {
@@ -19,6 +20,7 @@ router.post('/user', function(req, res, next){
 
 router.post('/join', function(req, res, next){
   helloWorld = req.body
+  quickstart()
   res.send('damn dawg')
 })
 

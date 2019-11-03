@@ -30,4 +30,5 @@ async function quickstart() {
   await document.delete();
   console.log('Deleted the document');
 }
-quickstart();
+
+export default { quickstart }
