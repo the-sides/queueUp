@@ -1,5 +1,30 @@
+@import 'variables';
+@import 'media-queries';
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+}
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #191c20;
-  color: #eeeeee;
+  font-family: 'Saira Condensed', sans-serif;
+  background-color: $darkest;
+  color: $orange;
+}
+header{
+  min-height: 64px;
+  background-color: $bluest;
+}
+main{
+  padding: 2em;
+}
+
+.partyPanel{
+  background-color: $dark;
+  width: 40%;
+  padding: 0.2em 1em;
+  
+  @include for-phone--only{
+    width: 90%;
+    margin: auto;
+  }
 }
