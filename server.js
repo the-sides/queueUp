@@ -9,11 +9,11 @@ const {Firestore} = require('@google-cloud/firestore');
 const admin = require('firebase-admin');
 const env = require('dotenv').config()
 
-let serviceAccount = require('./keys/serviceAccountKey.json');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+//   Broken on production and wasn't working anyways
+// let serviceAccount = require('./keys/serviceAccountKey.json');
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
 
 let db = admin.firestore();
 

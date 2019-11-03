@@ -12,7 +12,7 @@ body {
 }
 header{
   min-height: 64px;
-  background-color: $bluest;
+  background-color: $red;
 }
 main{
   padding: 2em;
@@ -27,4 +27,32 @@ main{
     width: 90%;
     margin: auto;
   }
+}
+
+
+.card{
+  display: flex;
+  height: 64px;
+  figure{
+    margin: 0;
+    padding: 0 0.5em;
+  }
+  img{
+    flex: 1;
+    width: 64px;
+    border-radius: 50%;
+  }
+  .text{
+    flex: 4;
+    * > {
+      margin: 0;
+      display: inline;
+    }
+    .name{
+      font-size: 1.5em;
+      color: $red;
+    }
+
+  }
+
 }
