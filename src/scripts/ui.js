@@ -8,6 +8,8 @@ function introduceMainUser(data){
         console.error('Multiple main user entries found', data)
         return false;
     }
-    console.log(`introducing ${data.discordName}`, data)
+    let elm = document.querySelector('.avatar')
+    let name = document.querySelector('.name')
+    let status = document.querySelector('.status')
 }
 export {introduceMainUser, updateUsers}
