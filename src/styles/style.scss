@@ -21,7 +21,8 @@ main{
 .partyPanel{
   background-color: $dark;
   width: 40%;
-  padding: 0.2em 1em;
+  min-width: 300px;
+  padding: 0.5em 1em;
   
   @include for-phone--only{
     width: 90%;
@@ -31,22 +32,37 @@ main{
 
 
 .card{
+  position: relative;
   display: flex;
-  height: 64px;
-  figure{
-    margin: 0;
-    padding: 0 0.5em;
+  height: calc(64px + .8em);
+  box-shadow: 0px 0px 4px black;
+  padding: .4em;
+  .wrapper{
+    margin: auto 0;
+    display: flex;
   }
-  img{
-    flex: 1;
-    width: 64px;
+  figure{
+    // margin: 0;
+    margin: 0 0.5em;
+  }
+  .avatar{
     border-radius: 50%;
+    background-color: grey;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    img{
+      flex: 1;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+    }
   }
   .text{
     flex: 4;
-    * > {
+    justify-content: space-around;
+    p{
       margin: 0;
-      display: inline;
     }
     .name{
       font-size: 1.5em;
@@ -54,5 +70,20 @@ main{
     }
 
   }
+  .leader{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 86px;
+      svg{
+        transform: scale(0.3);
+      }
+  }
 
+}
+.center{
+  line-height: 64px;
+}
+.hide{
+  display:none;
 }

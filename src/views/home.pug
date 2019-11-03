@@ -5,11 +5,15 @@ block content
         .partyPanel
             h1 Current Party:
             .mainUser.card
-                figure.avatar
-                    img
-                .text
-                    p.name
-                    p.status
+                .wrapper
+                    figure.avatar
+                        img
+                    .text
+                        p.name
+                        p.status
+                    figure.leader
+                        . 
+                            !{svg.crown}
             .log
         .potentials
     footer

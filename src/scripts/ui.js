@@ -20,5 +20,9 @@ function introduceMainUser(data){
     if(data['status'] !== undefined){
         status.textContent = data['status']
     }
+    else{
+        name.classList.add('center')
+        status.classList.add('hide')
+    }
 }
 export {introduceMainUser, updateUsers}
