@@ -31,4 +31,4 @@ async function quickstart() {
   console.log('Deleted the document');
 }
 
-export default { quickstart }
+module.default = quickstart
